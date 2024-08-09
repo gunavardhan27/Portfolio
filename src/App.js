@@ -1,25 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import HomeScreen from "./homescreen/HomeScreen";
+import Header from "./components/Header";
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen min-w-full bg-[#3ce6a2] sm:bg-blue-400 md:bg-slate-600 lg:bg-white">
+      <Header/>
     </div>
-  );
+  )
 }
-
-export default App;
