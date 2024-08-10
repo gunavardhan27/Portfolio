@@ -3,11 +3,31 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { RouterProvider,createBrowserRouter } from 'react-router-dom';
+import HomeScreen from './homescreen/HomeScreen';
+//import { Router } from 'react-router-dom';
+//import { Provider } from 'react-redux';
+import store from './store/Mode';
+import { Provider } from 'react-redux';
+import Skills from './components/Skills';
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const router = createBrowserRouter([
+  {
+    path:'/',
+    element: <App />,
+  },
+  {
+    path:'/Skills',
+    element:<Skills />
+  }
+])
+
 root.render(
+  
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+  </Provider>
   </React.StrictMode>
 );
 
