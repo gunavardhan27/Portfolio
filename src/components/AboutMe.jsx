@@ -6,7 +6,7 @@ import { modeAction } from '../store/Mode'
 export default function AboutMe(){
     
     return (
-        <section className='text-center bg-cyan-200 sticky'>
+        <section className='text-center'>
             <div className='grid grid-cols-2 justify-items-center'>
                 <p className='p-28'>
                 <img src={mi} alt='halo' className='w-[90] h-[87] outline outline-solid outline-offset-2 rounded-full 

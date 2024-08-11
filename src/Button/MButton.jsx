@@ -7,6 +7,7 @@ export default function MButton(){
         store.dispatch(modeAction.toggleButton())
       }
     return (
-        <button className={`mx-6 fixed z-50 p-4 rounded-full ${ mode?'dark:bg-white': 'bg-orange-400'}`} onClick={activate}>{mode?'Dark':'Light'}</button>
+        <button className={`mx-6 fixed z-50 p-4 w-[80px] h-[80px] shadow-xl shadow-black rounded-full bg-white 
+            dark:shadow-yellow-100 dark:bg-orange-800`} onClick={activate}>{mode?'Dark':'Light'}</button>
     )
 }

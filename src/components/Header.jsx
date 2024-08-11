@@ -24,7 +24,7 @@ export default function Header(){
         set(!isOpen)
     }
     return (
-        <div>
+        
 
         <div className="dark:bg-blue-950 w-full h-18 bg-blue-400 sticky flex flex-row p-4 text-white font-sans z-[20]">
             <h1 className="flex w-full basis-1/2 text-2xl font-bold text-justify">Guna Vardhan</h1>
@@ -45,6 +45,5 @@ export default function Header(){
            </nav>}
            
     </div>
-        </div>
     )
 }

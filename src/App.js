@@ -9,11 +9,14 @@ import store, { modeAction } from "./store/Mode";
 import { Provider, useSelector } from "react-redux";
 import Skills from "./components/Skills";
 import MButton from "./Button/MButton";
+import Projects from "./components/Projects";
+import Experience from "./components/Experience";
+import Profiles from "./components/Profiles";
 export default function App() {
   const mode = useSelector(state=>state.data.toggle)
   
   return (
-    <div className={`${mode && "dark"} min-h-screen min-w-full bg-[#3ce6a2] sm:bg-blue-400 md:bg-slate-600 lg:bg-white`}>
+    <div className={`${mode && "dark"} min-h-screen min-w-full dark:bg-gray-700  bg-[#3ce6a2] sm:bg-cyan-200`}>
 
       <Header/>
          <MButton />
@@ -26,6 +29,9 @@ export default function App() {
       innerScale={0.7}
       outerScale={5} />
       <Skills />
+      <Projects />
+      <Experience />
+      <Profiles />
     </div>
   )
 }
