@@ -1,3 +1,14 @@
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import 'swiper/css/free-mode'
+import 'swiper/css/pagination';
+import {RxArrowTopRight} from 'react-icons/rx'
+import { EffectCoverflow, Pagination, Navigation,FreeMode } from 'swiper/modules';
+
+
+
 export default function Profiles(){
     
     const ProfilesData=[
@@ -33,16 +44,57 @@ export default function Profiles(){
         },
     ]
         return (
-            <div className="m-7 p-8 flex flex-col justify-between items-center bg-blue-500">
+            <div className=''>
+                <h1 className='flex items-center justify-center text-3xl font-bold dark:text-yellow-50'>MY PROFILES</h1>
+            {/*<div className="m-7 p-8 flex flex-col justify-between items-center bg-blue-500 dark:text-white">
                 {ProfilesData.map(data=>(
-                    <div className="w-[370px] h-[300px] m-5 bg-white border-4 border-black sticky ">
-                        {data.name}
-                        <image src={data.pic} />
+                    <div className="w-[370px] m-5 p-0 h-[300px]  bg-white border-4 border-black sticky flex flex-col
+                    justify-center items-center dark:bg-slate-500">
+                        <img className='w-[120px] h-[80px] m-[20px]' src={data.pic} />
+                        <h1 className='text-3xl text-yellow-400 font-bold'>{data.name}</h1>
                         {data.description}
                         <a href={data.link}>view</a>
                     </div>
                 ))}
                 
-           </div> 
+           </div> */}
+           <div className='flex justify-center items-center flex-col h-screen bg-blue-500 m-8'>
+            
+            <Swiper
+            breakpoints={{
+                340:{
+                    slidesPerView:2,
+                    spaceBetween:15,
+                },
+                700:{
+                    slidesPerView:3,
+                    spaceBetween:15,
+                },
+                
+            }}
+            freeMode={true}
+            pagination={{
+                clickable: true
+            }}
+            modules={[FreeMode,Pagination]}
+            className='max-w-[90%] lg:max-w-[80%]'>
+                {ProfilesData.map(data=>(
+                    <SwiperSlide>
+
+                     <div className="bg-violet-400 flex flex-col gap-6 items-center justify-centermb-20 group relative shadow-lg text-white rounded-xl px-6 py-8 h-[250px] w-[215px] lg:h-[400px] lg:w-[350px] overflow-hidden cursor-pointer">
+                     <img className='w-[120px] h-[80px] m-[20px]' src={data.pic} />
+                        <h1 className='text-3xl text-yellow-400 font-bold'>{data.name}</h1>
+                        {data.description}
+                        <a href={data.link}>view</a>
+                     
+                    
+                     <RxArrowTopRight className="absolute bottom-5 left-5 w-[35px] h-[35px] text-white group-hover:text-blue-500 group-hover:rotate-45 duration-100" />
+                   </div>
+                    </SwiperSlide>
+                ))}
+
+            </Swiper>
+           </div>
+         </div>
     )
 }

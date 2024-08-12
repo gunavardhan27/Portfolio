@@ -16,7 +16,7 @@ export default function Experience(){
         <h1>My Projects</h1>
         <div className='grid grid-cols-2 gap-8 p-8'>
             {data.map(project=>(
-                <div className='flex justify-center items-center'>
+                <div className='flex justify-center items-center '>
                 <FlipCard front={project.info} back={project.description} />
                 </div>
             ))}
@@ -39,11 +39,11 @@ function FlipCard({front,back}){
             <ReactCardFlip
             isFlipped={isFlipped}
             flipDirection='horizontal'>
-                <div className='card-front w-[380px] h-[270px] bg-slate-400 border-cyan-50
+                <div className='card-front w-[380px] h-[270px] bg-slate-400 border-cyan-50 rounded-xl
                 flex justify-center items-center' onClick={handleClick}>
                     {front.name}
                 </div>
-                <div className='card-back w-[380px] h-[270px] bg-slate-400 border-cyan-50
+                <div className='card-back w-[380px] h-[270px] bg-slate-400 border-cyan-50 rounded-xl
                 flex justify-center items-center' onClick={handleClick}>
                     {back}
                 </div>

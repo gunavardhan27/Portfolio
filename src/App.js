@@ -12,6 +12,7 @@ import MButton from "./Button/MButton";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Profiles from "./components/Profiles";
+import Ending from "./components/Ending";
 export default function App() {
   const mode = useSelector(state=>state.data.toggle)
   
@@ -32,6 +33,7 @@ export default function App() {
       <Projects />
       <Experience />
       <Profiles />
+      <Ending />
     </div>
   )
 }
