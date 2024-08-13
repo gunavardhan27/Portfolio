@@ -21,7 +21,7 @@ export default function Skills(){
     setIsFlipped(!isFlipped);
   }
     return (
-        <div className='mx-10 bg-blue-600 p-8 m-20'>
+        <div className='mx-10 bg-[#68D2E8] p-8 m-20'>
         <h1 className="text-4xl font-extrabold flex items-center justify-center">MY SKILLS</h1>
         <div className="sm:flex flex-cols justify-around items-center md:grid grid-cols-4 p-8 gap-7">
             {skills.map(skill=>(

@@ -1,4 +1,4 @@
-import {NavLink,Router} from 'react-router-dom'
+import {NavLink,Router,Link} from 'react-router-dom'
 import {Menu,X} from 'lucide-react'
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
@@ -26,12 +26,12 @@ export default function Header(){
     return (
         
 
-        <div className="dark:bg-blue-950 w-full h-18 bg-blue-400 sticky flex flex-row p-4 text-white font-sans z-[20]">
+        <div className="dark:bg-blue-950 w-full h-18 bg-[#9BE8D8] sticky flex flex-row p-4 text-white font-sans z-[20]">
             <h1 className="flex w-full basis-1/2 text-2xl font-bold text-justify">Guna Vardhan</h1>
             <nav className="hidden md:text-md md:font-semibold md:flex w-full basis-1/2 flex-row justify-around">
             {data.map(item=>(
                 <div className="text-white hover:underline hover:text-green-400 hover:text-xl" key={item}>
-                    <NavLink to={`/${item}`}>{item}</NavLink>
+                    <Link to={`/${item}`}>{item}</Link>
                 </div>
             ))}
            </nav>

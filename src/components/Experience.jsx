@@ -12,7 +12,7 @@ export default function Experience(){
     }
     ]
     return (
-        <div className='mx-10 p-8 bg-blue-500 m-20'>
+        <div className='mx-10 p-8 bg-[#68D2E8] m-20'>
         <h1>My Projects</h1>
         <div className='grid grid-cols-2 gap-8 p-8'>
             {data.map(project=>(
@@ -39,11 +39,11 @@ function FlipCard({front,back}){
             <ReactCardFlip
             isFlipped={isFlipped}
             flipDirection='horizontal'>
-                <div className='card-front w-[380px] h-[270px] bg-slate-400 border-cyan-50 rounded-xl
+                <div className='card-front w-[380px] h-[270px] bg-violet-400 border-cyan-50 rounded-xl
                 flex justify-center items-center' onClick={handleClick}>
                     {front.name}
                 </div>
-                <div className='card-back w-[380px] h-[270px] bg-slate-400 border-cyan-50 rounded-xl
+                <div className='card-back w-[380px] h-[270px] bg-violet-400 border-cyan-50 rounded-xl
                 flex justify-center items-center' onClick={handleClick}>
                     {back}
                 </div>

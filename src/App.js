@@ -17,7 +17,7 @@ export default function App() {
   const mode = useSelector(state=>state.data.toggle)
   
   return (
-    <div className={`${mode && "dark"} min-h-screen min-w-full dark:bg-gray-700  bg-[#3ce6a2] sm:bg-cyan-200`}>
+    <div className={`${mode && "dark"} min-h-screen min-w-full dark:bg-gray-700  sm:bg-cyan-200 lg:bg-[#FFAB7]`}>
 
       <Header/>
          <MButton />

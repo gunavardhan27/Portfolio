@@ -10,6 +10,8 @@ import HomeScreen from './homescreen/HomeScreen';
 import store from './store/Mode';
 import { Provider } from 'react-redux';
 import Skills from './components/Skills';
+import Profiles from './components/Profiles';
+import Experience from './components/Experience';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
   {
@@ -19,6 +21,14 @@ const router = createBrowserRouter([
   {
     path:'/Skills',
     element:<Skills />
+  },
+  {
+    path:'/profiles',
+    element:<Profiles />
+  },
+  {
+    path:'/experience',
+    element:<Experience />
   }
 ])
 

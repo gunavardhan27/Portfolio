@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode'
 import 'swiper/css/pagination';
 import {RxArrowTopRight} from 'react-icons/rx'
-import { EffectCoverflow, Pagination, Navigation,FreeMode } from 'swiper/modules';
+import { EffectCoverflow, Pagination, Navigation,FreeMode,Autoplay } from 'swiper/modules';
 
 
 
@@ -58,7 +58,7 @@ export default function Profiles(){
                 ))}
                 
            </div> */}
-           <div className='flex justify-center items-center flex-col h-screen bg-blue-500 m-8'>
+           <div className='flex justify-center items-center flex-col h-screen bg-[#68D2E8] m-8'>
             
             <Swiper
             breakpoints={{
@@ -76,7 +76,13 @@ export default function Profiles(){
             pagination={{
                 clickable: true
             }}
-            modules={[FreeMode,Pagination]}
+            loop={true}
+          autoplay={{
+            delay: 0,
+            disableOnInteraction: true,
+          }}
+          speed={5000}
+          modules={[FreeMode, Pagination, Autoplay]}
             className='max-w-[90%] lg:max-w-[80%]'>
                 {ProfilesData.map(data=>(
                     <SwiperSlide>
