@@ -45,7 +45,7 @@ export default function Profiles(){
     ]
         return (
             <div className=''>
-                <h1 className='flex items-center justify-center text-3xl font-bold dark:text-yellow-50'>MY PROFILES</h1>
+                <h1 className='flex items-center justify-center text-3xl font-bold  dark:text-yellow-50'>MY PROFILES</h1>
             {/*<div className="m-7 p-8 flex flex-col justify-between items-center bg-blue-500 dark:text-white">
                 {ProfilesData.map(data=>(
                     <div className="w-[370px] m-5 p-0 h-[300px]  bg-white border-4 border-black sticky flex flex-col
@@ -58,7 +58,7 @@ export default function Profiles(){
                 ))}
                 
            </div> */}
-           <div className='flex justify-center items-center flex-col h-screen bg-[#68D2E8] m-8'>
+           <div className='flex justify-center items-center flex-col h-screen dark:bg-[#818FB4]  bg-[#68D2E8] m-8'>
             
             <Swiper
             breakpoints={{
@@ -87,7 +87,8 @@ export default function Profiles(){
                 {ProfilesData.map(data=>(
                     <SwiperSlide>
 
-                     <div className="bg-violet-400 flex flex-col gap-6 items-center justify-centermb-20 group relative shadow-lg text-white rounded-xl px-6 py-8 h-[250px] w-[215px] lg:h-[400px] lg:w-[350px] overflow-hidden cursor-pointer">
+                     <div className="bg-white text-black dark:text-white  flex flex-col gap-6 items-center justify-centermb-20 
+                     group relative shadow-lg rounded-xl px-6 py-8 h-[250px] w-[215px] lg:h-[400px] lg:w-[350px] overflow-hidden cursor-pointer dark:bg-gray-600">
                      <img className='w-[120px] h-[80px] m-[20px]' src={data.pic} />
                         <h1 className='text-3xl text-yellow-400 font-bold'>{data.name}</h1>
                         {data.description}

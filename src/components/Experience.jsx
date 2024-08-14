@@ -8,18 +8,24 @@ export default function Experience(){
             started:'May 2024',
             ended:''
         },
-        description:''
+        description:{
+                first:'Developed and maintained graphene-django based applications',
+                second:'Created and managed models for data handling and integration',
+                third:'Designed and implemented graphql schemas mutations and queries'
+        }
     }
     ]
     return (
-        <div className='mx-10 p-8 bg-[#68D2E8] m-20'>
-        <h1>My Projects</h1>
+        <div>
+            <h1 className='mt-12 flex items-center justify-center text-3xl font-bold dark:text-yellow-50'>MY EXPERIENCE</h1>
+        <div className='mx-10 mt-2 p-8 dark:bg-[#818FB4] dark:text-white bg-[#68D2E8] m-20'>
         <div className='grid grid-cols-2 gap-8 p-8'>
             {data.map(project=>(
                 <div className='flex justify-center items-center '>
                 <FlipCard front={project.info} back={project.description} />
                 </div>
             ))}
+        </div>
         </div>
         </div>
     )
@@ -39,13 +45,18 @@ function FlipCard({front,back}){
             <ReactCardFlip
             isFlipped={isFlipped}
             flipDirection='horizontal'>
-                <div className='card-front w-[380px] h-[270px] bg-violet-400 border-cyan-50 rounded-xl
-                flex justify-center items-center' onClick={handleClick}>
-                    {front.name}
+                <div className="bg-white flex flex-col gap-6 items-center justify-center mb-20 group relative shadow-lg
+                 text-gray-600 rounded-xl px-6 py-8 h-[250px] w-[215px] lg:h-[280px] lg:w-[380px] overflow-hidden cursor-pointer
+                 dark:bg-gray-600 dark:text-white" onClick={handleClick}>
+                    <p className='flex items-center justify-center text-3xl font-extrabold'>{front.name}</p>
                 </div>
-                <div className='card-back w-[380px] h-[270px] bg-violet-400 border-cyan-50 rounded-xl
-                flex justify-center items-center' onClick={handleClick}>
-                    {back}
+                <div className='p-3 card-back w-[380px] h-[270px] bg-white border-cyan-50 rounded-xl
+                flex justify-center items-center dark:bg-gray-600' onClick={handleClick}>
+                    <div className='flex flex-col gap-2 justify-center items-center flex-wrap'>
+                        <h1> * {back.first}</h1>
+                        <h1> * {back.second}</h1>
+                        <h1> * {back.third}</h1>
+                    </div>
                 </div>
     
             </ReactCardFlip>

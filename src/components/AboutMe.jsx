@@ -6,7 +6,7 @@ import { modeAction } from '../store/Mode'
 export default function AboutMe(){
     
     return (
-        <section className='text-center'>
+        <section className='text-center dark:text-white'>
             <div className='grid grid-cols-2 justify-items-center'>
                 <p className='p-28'>
                 <img src={mi} alt='halo' className='w-[90] h-[87] outline outline-solid outline-offset-2 rounded-full 
@@ -14,7 +14,7 @@ export default function AboutMe(){
                 </p>
                 <div className='p-20 font-sans font-semibold'>
                     <h1 className='p-2 text-3xl'>Hello, I'm</h1>
-                    <h1 className='p-8 text-4xl text-amber-950 font-bold'>Guna Vardhan Boddeda</h1>
+                    <h1 className='p-8 text-4xl text-amber-950 font-bold dark:'>Guna Vardhan Boddeda</h1>
     
                     <TypeAnimation
       sequence={[
