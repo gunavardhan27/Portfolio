@@ -11,11 +11,11 @@ export default function Skill({skill}){
             <ReactCardFlip
             isFlipped={isFlipped}
             flipDirection='horizontal'>
-                <div className='card-front dark:bg-gray-600 bg-slate-50 rounded-full flex items-center justify-center h-[150px] w-[150px]
+                <div className='card-front bg-gray-600 dark:bg-slate-50 rounded-full flex items-center justify-center h-[150px] w-[150px]
                 shadow-black shadow-2xl' onClick={handleClick}>
                     <p className='text-2xl'>{skill.name}</p>
                 </div>
-                <div className='card-back dark:bg-gray-600 bg-slate-50 rounded-full flex items-center justify-center h-[150px] w-[150px]
+                <div className='card-back bg-gray-600 dark:bg-slate-50 rounded-full flex items-center justify-center h-[150px] w-[150px]
                 shadow-black shadow-2xl' onClick={handleClick}>
                 <CircularProgressbar
                   value={skill.percentage}

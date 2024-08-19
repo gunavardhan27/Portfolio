@@ -4,18 +4,12 @@ import { useSelector } from 'react-redux'
 import store from '../store/Mode'
 import { modeAction } from '../store/Mode'
 export default function AboutMe(){
-    
     return (
-        <section className='text-center dark:text-white'>
-            <div className='grid grid-cols-2 justify-items-center'>
-                <p className='p-28'>
-                <img src={mi} alt='halo' className='w-[90] h-[87] outline outline-solid outline-offset-2 rounded-full 
-                opacity-100 hover:opacity-50 ease-in-out duration-500' />
-                </p>
-                <div className='p-20 font-sans font-semibold'>
+        <section className='text-center'>
+            <div className='flex items-start justify-center'>
+            <div className='p-20 font-sans font-semibold'>
                     <h1 className='p-2 text-3xl'>Hello, I'm</h1>
                     <h1 className='p-8 text-4xl text-amber-950 font-bold dark:'>Guna Vardhan Boddeda</h1>
-    
                     <TypeAnimation
       sequence={[
         // Same substring at the start will only be typed out once, initially

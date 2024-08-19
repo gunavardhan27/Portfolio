@@ -44,7 +44,7 @@ export default function Profiles(){
         },
     ]
         return (
-            <div className=''>
+            <div className='' id="Profiles">
                 <h1 className='flex items-center justify-center text-3xl font-bold  dark:text-yellow-50'>MY PROFILES</h1>
             {/*<div className="m-7 p-8 flex flex-col justify-between items-center bg-blue-500 dark:text-white">
                 {ProfilesData.map(data=>(
@@ -58,7 +58,7 @@ export default function Profiles(){
                 ))}
                 
            </div> */}
-           <div className='flex justify-center items-center flex-col h-screen dark:bg-[#818FB4]  bg-[#68D2E8] m-8'>
+           <div className='flex justify-center items-center flex-col h-screen'>
             
             <Swiper
             breakpoints={{
@@ -87,16 +87,28 @@ export default function Profiles(){
                 {ProfilesData.map(data=>(
                     <SwiperSlide>
 
-                     <div className="bg-white text-black dark:text-white  flex flex-col gap-6 items-center justify-centermb-20 
-                     group relative shadow-lg rounded-xl px-6 py-8 h-[250px] w-[215px] lg:h-[400px] lg:w-[350px] overflow-hidden cursor-pointer dark:bg-gray-600">
-                     <img className='w-[120px] h-[80px] m-[20px]' src={data.pic} />
-                        <h1 className='text-3xl text-yellow-400 font-bold'>{data.name}</h1>
-                        {data.description}
-                        <a href={data.link}>view</a>
-                     
-                    
-                     <RxArrowTopRight className="absolute bottom-5 left-5 w-[35px] h-[35px] text-white group-hover:text-blue-500 group-hover:rotate-45 duration-100" />
-                   </div>
+                <div className="dark:bg-white dark:text-black text-white flex flex-col items-center justify-around mb-20 
+                 group relative shadow-lg rounded-xl px-4 py-6 h-[200px] w-[175px] sm:h-[250px] sm:w-[200px] 
+                 md:h-[300px] md:w-[250px] lg:h-[400px] lg:w-[350px] overflow-hidden cursor-pointer bg-gray-600 flex-wrap">
+  
+                 <img className='w-[40px] h-[30px] sm:w-[50px] sm:h-[35px] md:w-[80px] md:h-[60px] lg:w-[120px] lg:h-[80px] m-[10px] sm:m-[15px] md:m-[20px]' src={data.pic} alt={data.name} />
+  
+                  <h1 className='text-base sm:text-xl md:text-2xl lg:text-3xl text-yellow-400 font-bold text-center'>
+                  {data.name}
+                 </h1>
+  
+                 <p className='text-sm sm:text-base md:text-lg lg:text-xl text-center'>
+                  {data.description}
+                 </p>
+  
+                 <a href={data.link} className="text-xs sm:text-sm md:text-base lg:text-lg underline">
+                    View
+                 </a>
+  
+  <RxArrowTopRight className="absolute bottom-3 left-3 w-[15px] h-[15px] sm:w-[20px] sm:h-[20px] md:w-[25px] md:h-[25px] 
+                              lg:w-[35px] lg:h-[35px] text-white group-hover:text-blue-500 group-hover:rotate-45 duration-100" />
+</div>
+
                     </SwiperSlide>
                 ))}
 

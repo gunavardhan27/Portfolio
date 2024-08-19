@@ -1,5 +1,11 @@
 import {ReactCardFlip} from "react-card-flip"
+import {RiReactjsLine,RiTailwindCssFill} from 'react-icons/ri'
 import {Fragment, useState} from 'react'
+import { DiDjango } from "react-icons/di";
+import { SiApollographql,SiMongodb,SiNovu } from "react-icons/si";
+import { FaDocker,FaNode,FaPython } from "react-icons/fa";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { BiLogoTailwindCss } from "react-icons/bi";
 import Skill from "./Skill";
 export default function Skills(){
     const skills = [
@@ -21,14 +27,26 @@ export default function Skills(){
     setIsFlipped(!isFlipped);
   }
     return (
-        <div>
-            <h1 className='flex items-center justify-center text-3xl font-bold dark:text-yellow-50'>MY SKILLS</h1>
-        <div className='dark:bg-[#818FB4] dark:text-white mx-10 bg-[#68D2E8] p-8 m-20'>
-        <div className="sm:flex flex-cols justify-around items-center md:grid grid-cols-4 p-8 gap-7">
+        <div id="Skills" className=""> 
+            <h1 className='flex items-start justify-center text-3xl font-bold dark:text-yellow-50 m-20'>MY SKILLS</h1>
+        {/*<div className='text-white dark:text-black mx-10 p-8 m-20'>
+        <div className="flex flex-col justify-around items-center md:grid md:grid-cols-4 md:p-8 md:gap-7">
             {skills.map(skill=>(
                 <Skill skill={skill}/>
             ))}
         </div>
+        </div>*/}
+        <div className="flex flex-row items-center justify-around w-full mb-20 gap-8 flex-wrap">
+            <RiReactjsLine className="text-8xl text-cyan-800 border-4 border-neutral-800 p-2 rounded-lg" />
+            <DiDjango className="text-8xl text-green-800 border-4 border-neutral-800 p-2 rounded-lg" />
+            <SiApollographql className="text-8xl text-pink-600 border-4 border-neutral-800 p-2 rounded-lg"/>
+            <FaDocker className="text-8xl text-blue-800 border-4 border-neutral-800 p-2 rounded-lg" />
+            <FaNode className="text-8xl text-green-800 border-4 border-neutral-800 p-2 rounded-lg" />
+            <SiMongodb className="text-8xl text-green-800 border-4 border-neutral-800 p-2 rounded-lg" />
+            <BiLogoPostgresql className="text-8xl text-cyan-700 border-4 border-neutral-800 p-4 rounded-lg" />
+            <BiLogoTailwindCss className="text-8xl text-cyan-600 border-4 border-neutral-800 p-4 rounded-lg" />
+            <SiNovu className="text-8xl text-pink-500 border-4 border-neutral-800 p-4 rounded-lg" />
+            <FaPython className="text-8xl border-4 border-neutral-800 p-4 rounded-lg" />
         </div>
         </div>
     )

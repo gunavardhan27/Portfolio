@@ -1,7 +1,7 @@
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 export default function Ending(){
     return (
-        <div className='bg-black items-center justify-center text-cyan-200 mt-7 p-8'>
+        <div className='bg-black items-center justify-center text-cyan-200 mt-7 p-8' id='ContactMe'>
             <h1 className="text-3xl text-center text-yellow-400 font-bold mb-20">CONTACT ME</h1>
             <div className="sm:grid grid-rows-1 md:grid grid-cols-3 gap-7 mb-8">
                 <div className="flex flex-col items-center justify-center">

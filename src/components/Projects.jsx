@@ -43,10 +43,10 @@ export default function Projects(){
     }
     ]
     return (
-        <div>
+        <div id="Projects">
 
         <h1 className='flex mb-8 items-center justify-center text-3xl font-bold dark:text-yellow-50'>MY PROJECTS</h1>
-        <div className='mx-10 p-8 dark:bg-[#818FB4] dark:text-white bg-[#68D2E8]'>
+        <div className='mx-10 p-8 dark:text-white'>
         <div className='sm:flex flex-col justify-between items-center md:grid grid-cols-2 gap-8 p-8'>
             {data.map(project=>(
                 <div className='flex justify-center items-center m-3'>
@@ -69,18 +69,18 @@ function FlipCard({front,back}){
         return (
             <ReactCardFlip
             isFlipped={isFlipped}
-            flipDirection='horizontal'>
+            flipDirection='vertical'>
                 <div 
-                className="bg-white flex flex-col gap-6 items-center justify-center mb-20 group relative shadow-lg
-                 text-gray-600 rounded-xl px-6 py-8 h-[250px] w-[215px] lg:h-[280px] lg:w-[380px] overflow-hidden cursor-pointer
-                 dark:bg-gray-600 dark:text-white"
+                className="dark:bg-white flex flex-col gap-6 items-center justify-center mb-20 group relative shadow-lg
+                 dark:text-gray-600 rounded-xl px-6 min-w-[300px] sm:w-[300px] py-8 h-[280px] md:w-[380px] overflow-hidden cursor-pointer
+                 bg-gray-600 text-white flex-wrap"
                 onClick={handleClick}>
-                    <p className='flex items-center justify-center text-3xl font-extrabold'>{front}</p>
+                    <p className='flex items-center justify-center text:lg md:text-3xl font-extrabold'>{front}</p>
                 </div>
-                <div className='bg-white card-back w-[380px] h-[270px] shadow-lg border-cyan-50 rounded-xl
-                flex justify-center items-center
-                dark:bg-gray-600 dark:text-white' onClick={handleClick}>
-                    <div className='p-4 flex flex-col gap-2 justify-center items-center flex-wrap'>
+                <div className='dark:bg-white flex flex-col gap-6 items-center justify-center mb-20 group relative shadow-lg
+                 dark:text-gray-600 rounded-xl px-6 py-8 sm:w-[300px] h-[280px] md:w-[380px] min-w-[300px] overflow-hidden cursor-pointer
+                 bg-gray-600 text-white flex-wrap' onClick={handleClick}>
+                    <div className='p-4 flex flex-col gap-2 justify-center items-center'>
                         <h1> * {back.first}</h1>
                         <h1> * {back.second}</h1>
                         <h1> * {back.third}</h1>
