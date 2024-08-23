@@ -11,7 +11,8 @@ export default function Experience(){
         description:{
                 first:'Developed and maintained graphene-django based applications',
                 second:'Created and managed models for data handling and integration',
-                third:'Designed and implemented graphql schemas mutations and queries'
+                third:'Designed and implemented graphql schemas mutations and queries',
+                fourth:'implemented token-based and session based authentication and also implemented authorization to manage user-permissions'
         }
     }
     ]
@@ -20,7 +21,7 @@ export default function Experience(){
             <h1 className='mt-12 flex items-center justify-center text-3xl font-bold dark:text-yellow-50'>MY EXPERIENCE</h1>
         <div className='m-10 p-8 flex flex-col items-center justify-between'>
             {data.map(exp=>(
-                <div className='flex flex-row justify-between items-center w-full
+                <div className='flex flex-col  md:flex md:flex-row justify-between items-center w-full
                  bg-gray-700 dark:text-gray-700 py-6 px-4 rounded-lg dark:bg-white text-white'>
                     <div className='flex basis-1/2'>{exp.info.started} - {'present'}</div>
                     <div className='flex basis-1/2 flex-col items-start justify-around w-full gap-3'>
@@ -28,6 +29,7 @@ export default function Experience(){
                         <p>{exp.description.first}</p>
                         <p>{exp.description.second}</p>
                         <p>{exp.description.third}</p>
+                        <p>{exp.description.fourth}</p>
                     </div>
                 </div>
             ))}

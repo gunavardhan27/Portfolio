@@ -40,6 +40,14 @@ export default function Projects(){
             second:'The application is connected to Firebase for backend functionality',
             third:'Providing real-time data management.'
         }
+    },
+    {
+        title:'authenticator',
+        info:{
+            first:' built a Django-GraphQL application that handles user authentication, assigns user roles, and enforces authorization using decorators.',
+            second:'This setup ensures secure access control based on user roles.',
+            third:'The application effectively combines authentication and authorization to manage user permissions'
+        }
     }
     ]
     return (

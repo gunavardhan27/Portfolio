@@ -28,7 +28,7 @@ export default function AboutMe(){
       repeat={Infinity}
     />
 
-                    <a href='/21L31A05E0.pdf'>
+                    <a href='/resume.docx'>
                     <button className='text-xl opacity-50 bg-blue-900 text-white rounded-md p-2 hover:bg-slate-500 hover:shadow-2xl shadow-blue-900 hover:opacity-100
                      transition ease-in-out'>Resume</button>
                     </a>
