@@ -9,7 +9,7 @@ export default function MButton(){
         store.dispatch(modeAction.toggleButton())
       }
     return (
-        <button className={`mx-6 fixed top-36 left-10 z-50 p-4 w-[100px] h-[60px] shadow-xl shadow-black rounded-full bg-white 
+        <button className={`mx-6 fixed w-[60px] h-[40px] top-26 left-10 z-50 p-1 md:p-4 md:w-[100px] md:h-[60px] shadow-xl shadow-black rounded-full bg-white 
             dark:shadow-yellow-100 dark:bg-orange-800`} onClick={activate}>
                 <div className="flex flex-row items-start w-full justify-between">
                 <div>

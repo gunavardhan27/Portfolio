@@ -6,7 +6,7 @@ import 'swiper/css/free-mode'
 import 'swiper/css/pagination';
 import {RxArrowTopRight} from 'react-icons/rx'
 import { EffectCoverflow, Pagination, Navigation,FreeMode,Autoplay } from 'swiper/modules';
-
+import { FaLinkedin } from "react-icons/fa";
 
 
 export default function Profiles(){
@@ -44,29 +44,22 @@ export default function Profiles(){
         },
     ]
         return (
-            <div className='' id="Profiles">
-                <h1 className='flex items-center justify-center text-3xl font-bold  dark:text-yellow-50'>MY PROFILES</h1>
-            {/*<div className="m-7 p-8 flex flex-col justify-between items-center bg-blue-500 dark:text-white">
-                {ProfilesData.map(data=>(
-                    <div className="w-[370px] m-5 p-0 h-[300px]  bg-white border-4 border-black sticky flex flex-col
-                    justify-center items-center dark:bg-slate-500">
-                        <img className='w-[120px] h-[80px] m-[20px]' src={data.pic} />
-                        <h1 className='text-3xl text-yellow-400 font-bold'>{data.name}</h1>
-                        {data.description}
-                        <a href={data.link}>view</a>
-                    </div>
-                ))}
+
                 
-           </div> */}
-           <div className='flex justify-center items-center flex-col h-screen'>
             
+           <div className='w-full flex justify-center items-center flex-col gap-3'>
+           <h1 className='flex items-center justify-center text-3xl mb-8 font-bold  dark:text-yellow-50'>MY PROFILES</h1>
             <Swiper
             breakpoints={{
                 340:{
-                    slidesPerView:2,
+                    slidesPerView:1,
                     spaceBetween:15,
                 },
-                700:{
+                500:{
+                    slidesPerView:2,
+                    spaceBetween:15
+                },
+                800:{
                     slidesPerView:3,
                     spaceBetween:15,
                 },
@@ -83,15 +76,15 @@ export default function Profiles(){
           }}
           speed={5000}
           modules={[FreeMode, Pagination, Autoplay]}
-            className='max-w-[90%] lg:max-w-[80%]'>
+            className='max-w-[100%]'>
                 {ProfilesData.map(data=>(
                     <SwiperSlide>
 
-                <div className="dark:bg-white dark:text-black text-white flex flex-col items-center justify-around mb-20 
-                 group relative shadow-lg rounded-xl px-4 py-6 h-[200px] w-[175px] sm:h-[250px] sm:w-[200px] 
-                 md:h-[300px] md:w-[250px] lg:h-[400px] lg:w-[350px] overflow-hidden cursor-pointer bg-gray-600 flex-wrap">
+                <div className=" dark:bg-slate-600 text-black dark:text-white flex flex-col items-center justify-around mb-20 
+                 group relative shadow-lg rounded-xl px-4 py-6
+                 h-[300px] w-[250px] lg:h-[400px] lg:w-[350px] overflow-hidden cursor-pointer bg-violet-200">
   
-                 <img className='w-[40px] h-[30px] sm:w-[50px] sm:h-[35px] md:w-[80px] md:h-[60px] lg:w-[120px] lg:h-[80px] m-[10px] sm:m-[15px] md:m-[20px]' src={data.pic} alt={data.name} />
+                 <img className='w-[50px] h-[35px] md:w-[80px] rounded-md md:h-[60px] lg:w-[120px] lg:h-[80px] m-[10px] sm:m-[15px] md:m-[20px]' src={data.pic} alt={data.name} />
   
                   <h1 className='text-base sm:text-xl md:text-2xl lg:text-3xl text-yellow-400 font-bold text-center'>
                   {data.name}
@@ -114,6 +107,5 @@ export default function Profiles(){
 
             </Swiper>
            </div>
-         </div>
     )
 }

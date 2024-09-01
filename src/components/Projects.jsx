@@ -44,7 +44,7 @@ export default function Projects(){
     {
         title:'authenticator',
         info:{
-            first:' built a Django-GraphQL application that handles user authentication, assigns user roles, and enforces authorization using decorators.',
+            first:' built a Django-GraphQL application that handles user authentication, assigns user roles, and enforces authorization',
             second:'This setup ensures secure access control based on user roles.',
             third:'The application effectively combines authentication and authorization to manage user permissions'
         }
@@ -79,16 +79,17 @@ function FlipCard({front,back}){
             isFlipped={isFlipped}
             flipDirection='vertical'>
                 <div 
-                className="dark:bg-white flex flex-col gap-6 items-center justify-center mb-20 group relative shadow-lg
-                 dark:text-gray-600 rounded-xl px-6 min-w-[300px] sm:w-[300px] py-8 h-[280px] md:w-[380px] overflow-hidden cursor-pointer
-                 bg-gray-600 text-white flex-wrap"
+                className="dark:bg-slate-600 flex flex-col gap-6 items-center justify-center mb-20 group relative shadow-lg
+                 text-gray-600 rounded-xl px-6 min-w-[300px] sm:w-[300px]  h-[280px] md:w-[380px] overflow-hidden cursor-pointer
+                 bg-violet-200 dark:text-white flex-wrap"
                 onClick={handleClick}>
-                    <p className='flex items-center justify-center text:lg md:text-3xl font-extrabold'>{front}</p>
+                    <p className='flex items-center justify-center text:md md:text-3xl font-extrabold'>{front}</p>
                 </div>
-                <div className='dark:bg-white flex flex-col gap-6 items-center justify-center mb-20 group relative shadow-lg
-                 dark:text-gray-600 rounded-xl px-6 py-8 sm:w-[300px] h-[280px] md:w-[380px] min-w-[300px] overflow-hidden cursor-pointer
-                 bg-gray-600 text-white flex-wrap' onClick={handleClick}>
-                    <div className='p-4 flex flex-col gap-2 justify-center items-center'>
+
+                <div className='dark:bg-slate-600 flex flex-col gap-6 items-center justify-center mb-20 group relative shadow-lg
+                  text-gray-600 rounded-xl px-6 py-8 sm:w-[300px] h-[280px] md:w-[380px] min-w-[300px] overflow-hidden cursor-pointer
+                 bg-violet-200 dark:text-white flex-wrap' onClick={handleClick}>
+                    <div className='w-full p-2 flex flex-col gap-2 justify-center items-center'>
                         <h1> * {back.first}</h1>
                         <h1> * {back.second}</h1>
                         <h1> * {back.third}</h1>

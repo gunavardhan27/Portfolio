@@ -19,7 +19,7 @@ export default function App() {
   //<div class="absolute inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]"></div>
   //<div class="absolute top-0 -z-10 h-full w-full bg-white"><div class="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px]"></div></div>
   return (
-    <div className={`${mode && "dark"} h-full w-full`}
+    <div className={`${mode && "dark"} h-full w-full `}
     style={mode && "dark" ? {backgroundImage: 'linear-gradient(to right, #d7d2cc 0%, #304352 100%)'}:
     {backgroundImage: 'linear-gradient(120deg, #a6c0fe 0%, #f68084 100%)'}}>
 
