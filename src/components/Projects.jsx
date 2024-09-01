@@ -73,20 +73,21 @@ function FlipCard({front,back}){
     const [isFlipped,setFlipped] = useState(false)
     const handleClick = ()=>{
             setFlipped(!isFlipped)
+
         }
         return (
             <ReactCardFlip
             isFlipped={isFlipped}
             flipDirection='vertical'>
                 <div 
-                className="dark:bg-slate-600 flex flex-col gap-6 items-center justify-center mb-20 group relative shadow-lg
-                 text-gray-600 rounded-xl px-6 min-w-[300px] sm:w-[300px]  h-[280px] md:w-[380px] overflow-hidden cursor-pointer
+                className="front dark:bg-slate-600 flex flex-col gap-6 items-center justify-center mb-20 group relative shadow-lg
+                 text-gray-600 rounded-xl px-6 py-8 min-w-[300px] sm:w-[300px]  h-[280px] md:w-[380px] overflow-hidden cursor-pointer
                  bg-violet-200 dark:text-white flex-wrap"
                 onClick={handleClick}>
                     <p className='flex items-center justify-center text:md md:text-3xl font-extrabold'>{front}</p>
                 </div>
 
-                <div className='dark:bg-slate-600 flex flex-col gap-6 items-center justify-center mb-20 group relative shadow-lg
+                <div className='back dark:bg-slate-600 flex flex-col gap-6 items-center justify-center mb-20 group relative shadow-lg
                   text-gray-600 rounded-xl px-6 py-8 sm:w-[300px] h-[280px] md:w-[380px] min-w-[300px] overflow-hidden cursor-pointer
                  bg-violet-200 dark:text-white flex-wrap' onClick={handleClick}>
                     <div className='w-full p-2 flex flex-col gap-2 justify-center items-center'>

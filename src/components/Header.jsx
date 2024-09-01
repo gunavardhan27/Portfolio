@@ -34,7 +34,7 @@ export default function Header(){
            </nav>
            <div className={`text-white dark:text-gray-700 
              w-[50%]  flex flex-row items-start justify-end gap-3 z-100 fixed ${isOpen ? 'top-0 right-0': 'top-5 right-3'}`}>
-           <div className={`w-[70%] flex flex-row items-start justify-end gap-2 h-screen py-3 ${isOpen && 'bg-gray-700 md:hidden text-white rounded-lg'}`}>
+           <div className={`w-[70%] flex flex-row items-start justify-end gap-2 py-3 ${isOpen && 'bg-gray-700 md:hidden text-white rounded-lg h-screen'}`}>
            {isOpen &&<nav className='flex flex-col items-end justify-start md:hidden gap-3  p-2 rounded-md '>
             {data.map(item=>(
                 <div className=" hover:underline-offset-4 hover:text" key={item}>
